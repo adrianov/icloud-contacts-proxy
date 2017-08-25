@@ -86,7 +86,7 @@ var iCloud = new Class({
       self.session = sort(body, ['dsInfo', 'webservices']);
       self.session.jar = jar;
       self.session.session_creation = Date.now();
-      chain();
+      self.contact = new Contact(self, detach(chain));
     });
   },
 
